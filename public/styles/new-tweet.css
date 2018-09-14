@@ -1,0 +1,38 @@
+.new-tweet {
+    height: 175px;
+    margin: 2em;
+    position: center;
+    border: 2px solid #a0a0a0;
+    background-color: #eee;   
+    border-radius: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.new-tweet article{
+    margin: 6em;
+    width: 100%;
+    border: 2px solid #a0a0a0;
+    background-color: #eee;   
+    border-radius: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.new-tweet textArea {
+    float: center;
+    width: 100%;
+}
+
+.new-tweet input{
+    float: left; 
+}
+
+.new-tweet .counter{
+    float: right;
+   }
+
+.new-tweet h2 {
+    border-bottom: 1px solid #000000;
+   }
+
