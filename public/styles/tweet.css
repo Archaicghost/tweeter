@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+.tweet {
+
+  height: 175px;
+  margin: 2em;
+  float: top;
+  border: 1px solid #a0a0a0;
+  border-radius: 10px;
+
+}
+
+.tweet article { 
+  float: center;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.tweet .avataruserId {
+    float: left;
+    
+
+  }
+
+.tweet article:hover {
+  opacity: 1;
+  float: center;
+  width: 100%;
+}
+
+
+.tweet .name {
+  font-size: 150%;
+  font-weight: 700;
+  position: relative;
+  bottom: 30px;
+  
+}
+
+.tweet .userId {
+  float: right;
+  font-weight: 300;
+
+}
+
+.tweet .userTweet {
+  padding-top: 2em;
+  font-weight: 300;
+  padding-bottom: 2em;
+   
+}
+
+.tweet header {
+  position: top;
+  height: 4em;
+  background-color: #eee;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 5px;
+
+}
+
+.tweet footer {
+  padding: 5px;
+  font-size: 75%;
+  font-weight: 300;
+  border-top: 1px solid #a0a0a0;
+
+}

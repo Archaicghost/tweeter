@@ -1,23 +1,21 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 .new-tweet {
     height: 175px;
     margin: 2em;
     position: center;
-    border: 2px solid #a0a0a0;
+    border: 1px solid #a0a0a0;
     background-color: #eee;   
     border-radius: 10px;
     padding-left: 2em;
     padding-right: 2em;
 }
 
-.new-tweet article{
-    margin: 6em;
-    width: 100%;
-    border: 2px solid #a0a0a0;
-    background-color: #eee;   
-    border-radius: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-}
 
 .new-tweet textArea {
     float: center;
