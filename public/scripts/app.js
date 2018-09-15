@@ -10,12 +10,19 @@ $('#tweetForm').on('submit', function(event) {
 
     // 1. Grab the content of the form
     let formData = $('#tweetForm').serialize();
+    let entry = $('#textarea').val();
 
+    console.log(entry)
+    if (entry === null || entry === ''){
+      alert('text too short!')
+    }if (entry.length > 140){
+      alert('text too long!')
+    } else {
     // 2. Submit using ajax
     $.ajax('/tweets', {
       method: 'POST',
       data: formData,
-    }).then(function(suc) {
+    }).then(function(success) {
       // 3. Clear the form
       // $('#tweetForm input').val('');
       // $('#tweetForm').empty();
@@ -23,6 +30,7 @@ $('#tweetForm').on('submit', function(event) {
       // 4. Make sure the new tweet shows
       return $.ajax('/tweets');
     }).then(renderTweets);
+    }
   })
 
 function loadTweets(){
