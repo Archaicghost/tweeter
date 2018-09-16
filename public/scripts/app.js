@@ -1,16 +1,19 @@
 
 $(function () {
-//Handle submit event emited by form
-//prevent default behavour (event.preventDefualt()
-//send query string to body of AJAX post request (.serialize() turns data into query sting)
-//use console log to validate ajax request (Network Tab)
 
-$('#tweetForm').on('submit', function(event) {
+//Toggle compose tweet with button
+  $( ".compose" ).click(function() {
+    $( ".new-tweet" ).slideToggle( "slow" );
+    textarea.focus()
+  });
+
+  //make new tweet with ajax and compose tweet input
+  $('.tweetForm').on('submit', function(event) {
     event.preventDefault();
 
     // 1. Grab the content of the form
-    let formData = $('#tweetForm').serialize();
-    let entry = $('#textarea').val();
+    let formData = $('.tweetForm').serialize();
+    let entry = $('.textarea input').val();
 
     console.log(entry)
     if (entry === null || entry === ''){
@@ -24,8 +27,8 @@ $('#tweetForm').on('submit', function(event) {
       data: formData,
     }).then(function(success) {
       // 3. Clear the form
-      // $('#tweetForm input').val('');
-      // $('#tweetForm').empty();
+      // $('.tweetForm input').val('');
+      // $('.tweetForm').empty();
         console.log('succesful')
       // 4. Make sure the new tweet shows
       return $.ajax('/tweets');
@@ -33,24 +36,24 @@ $('#tweetForm').on('submit', function(event) {
     }
   })
 
+//Loading new tweets and rendering previous tweets to page
 function loadTweets(){
-let $submit = $('#new-tweet-text');
+let $submit = $('.new-tweet-text');
 
   $.ajax('/tweets', { method: 'GET' })
-  .then(function (myJson) {
-    console.log('Success: ', myJson);
-    $submit.replaceWith(myJson);
+     .then(function (myJson) {
+       renderTweets(myJson)
 
+    console.log('Success: ', myJson);
+
+    $submit.replaceWith(myJson);
+    renderTweets()
+  
   });
 }
 loadTweets()
 
-
-
-
-
-
-  
+  //rendering tweets submitted
   function renderTweets(tweets) {
 
     for (let userData in tweets) {
@@ -58,14 +61,13 @@ loadTweets()
     let tweet = tweets[userData];
     let newComment = createTweetElement(tweet)
      
-    $('#tweets-container').prepend(newComment)
-
+    $('.tweets-container').prepend(newComment)
     }
-    
   }
-  
+
+  //creating composed tweets with user info
   function createTweetElement(tweet) {
-    //   console.log(tweet.user.name)
+
     let $tweet = $('<article>').addClass('tweet');
     let $commentHeader = $('<header>').addClass('commentHeader');
     let $avatar = $('<img>').addClass('avatar').attr("src", tweet.user.avatars.small);
@@ -85,12 +87,22 @@ loadTweets()
     $tweet.append($commentHeader, $tweetText, $commentFooter)
 
     return $tweet;
-
-   
   }
 
+
+//Slide up and slide down for 'compose' box
+
+// 	$(button).click(function() {  
+// 	   if ($(button).submit() + $(window).height() > $(document).height() - 175) {
+// 	       $('.new-tweet').slideDown(); 
+// 	   }
+// 	    else {
+// 	   	$('.new-tweet').slideUp();  
+// 	   }
+// 	});
+// });
 //   console.log(createTweetElement(data)); // to see what it looks like
-//   $('#tweets-container').append($tweet);
+//   $('.tweets-container').append($tweet);
 //   renderTweets(data);
 
 // $ is a shortcut for document.getElementById().

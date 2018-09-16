@@ -4,6 +4,7 @@ $(document).ready(function() {
   let counter = textarea.siblings('.counter');
 
   textarea.on('input', function(){
+
     let textarea = $(this)
     let charIn = textarea.val().length;
     let charCount = 140 - charIn;

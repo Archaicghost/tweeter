@@ -6,7 +6,7 @@ html {
   }
 
 
-#tweets-container {
+.tweets-container {
 
     height: auto;
     margin: 2em;
@@ -14,7 +14,7 @@ html {
      
   
   }
-#tweets-container .tweet {
+.tweets-container .tweet {
 
   height: auto;
   margin-bottom: 2em; 
@@ -24,20 +24,20 @@ html {
 
 }
 
-#tweets-container .avatar {
+.tweets-container .avatar {
   float: left;
   width: 50px;
   height: 50px;
   
 }
 
-#tweets-container article { 
+.tweets-container article { 
   float: center;
   width: 100%;
   opacity: 0.5;
 }
 
-#tweets-container article:hover {
+.tweets-container article:hover {
   opacity: 1;
   float: center;
   width: 100%;
@@ -45,36 +45,36 @@ html {
 }
 
 
-#tweets-container .hiddenIcon {
+.tweets-container .hiddenIcon {
   
   display: none;
 
 }
 
-#tweets-container article:hover .hiddenIcon {
+.tweets-container article:hover .hiddenIcon {
   float: right;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   padding-bottom: 0.30em;
   display: block; 
 }
 
 
-#tweets-container .name {
+.tweets-container .name {
   font-size: 150%;
   font-weight: 700;
   float: left;
   padding-left: 0.3em;
 }
 
-#tweets-container .userId {
+.tweets-container .userId {
   float: right;
   font-weight: 300;
   margin: 0em;
   padding-top: 1em;
 }
 
-#tweets-container .tweetText {
+.tweets-container .tweetText {
   padding-top: 2em;
   font-weight: 300;
   padding-bottom: 2em; 
@@ -82,7 +82,7 @@ html {
    
 }
 
-#tweets-container header {
+.tweets-container header {
   height: 4em;
   background-color: #eee;
   border-top-right-radius: 10px;
@@ -91,7 +91,7 @@ html {
 
 }
 
-#tweets-container footer {
+.tweets-container footer {
   font-size: 75%;
   font-weight: 300;
   padding: .5em;

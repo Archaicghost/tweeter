@@ -6,7 +6,9 @@
     position: fixed;
     top: 0;
     bottom: 0;
+    z-index: 1
   }
+
 
 
 #nav-bar .logo {
@@ -24,5 +26,35 @@
     font-weight: 300;
   }
 
- 
   
+ #nav-bar .compose
+{
+    margin-top: .5em;
+    height: 3em;
+    width: 6em;
+    color: #00a087;
+    border: 1px solid #000000;
+    background: #E7FDFF;
+    float: right;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#nav-bar .compose:hover {
+    /* outline: 1px solid #fff; */
+    /* outline-offset: -4px; */
+    color: black;
+    background: #ffffff;
+    float: right;
+    font-size: 20px;
+    font-family: inherit;
+    border-radius: 10px;
+    font-weight: 300;
+}
+
+ /* #nav-bar .compose:active {
+    transform: scale(0.99);
+    float: right;
+}  */
