@@ -23,9 +23,6 @@
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-
-
-
   </head>
 
   <body>
@@ -40,15 +37,19 @@
     <!-- Page-specific (main) content here -->
    
     <main class="container"> 
-      <section class="new-tweet">
-        
-        <form action='/tweets' Method='POST' id="tweetForm">
-          <h2>Compose Tweet</h2>
-          <textarea id= "textarea" name="text" onfocus='this.select()' placeholder="What are you humming about?"></textarea>
-          <input class="submit" type="submit"  value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
+        <section class="new-tweet">
+          
+          <form action='/tweets' Method='POST' id="tweetForm">
+            <h2>Compose Tweet</h2>
+            <textarea class= "textarea" id="textarea" name="text" onfocus='this.select()' placeholder="What are you humming about?"></textarea>
+            <h6 class="error1">Tweet is to long!</h6>
+            <h6 class="error2">Tweet is to short!</h6>
+            <input class="submit" type="submit"  value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+  
+        <div class='tweets-container'></div>
 
       <div class='tweets-container'></div>
 

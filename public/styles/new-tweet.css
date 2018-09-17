@@ -16,7 +16,7 @@ html {
     border-radius: 10px;
     padding-left: 2em;
     padding-right: 2em;
-    /* display: none; */
+    display: none;
 }
 
 
@@ -37,3 +37,13 @@ html {
     border-bottom: 1px solid #000000;
    }
 
+   .new-tweet .error1 {
+    display: block;
+    
+  }
+  
+  .new-tweet .error2 {
+    display: block;
+  
+  }
+  

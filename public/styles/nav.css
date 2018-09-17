@@ -43,8 +43,6 @@
 }
 
 #nav-bar .compose:hover {
-    /* outline: 1px solid #fff; */
-    /* outline-offset: -4px; */
     color: black;
     background: #ffffff;
     float: right;
@@ -54,7 +52,3 @@
     font-weight: 300;
 }
 
- /* #nav-bar .compose:active {
-    transform: scale(0.99);
-    float: right;
-}  */
