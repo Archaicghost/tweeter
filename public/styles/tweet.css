@@ -75,10 +75,12 @@ html {
 }
 
 .tweets-container .tweetText {
-  padding-top: 2em;
+  /* padding-top: 2em; */
   font-weight: 300;
-  padding-bottom: 2em; 
-  padding-left: 1em;
+  /* padding-bottom: 2em;  */
+  padding: 2em;
+  height:auto;
+  word-wrap: break-word;
    
 }
 
@@ -100,14 +102,5 @@ html {
 }
 
 
-.tweets-container .error1 {
-  display: block;
-  
-}
-
-.tweets-container .error2 {
-  display: block;
-
-}
 
 

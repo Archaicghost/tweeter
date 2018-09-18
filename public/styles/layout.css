@@ -19,6 +19,7 @@ body {
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto', sans-serif;
+
 }
 
 /*
@@ -31,4 +32,6 @@ body {
   width: 450px;
   height: auto;
   background: #ffffff;
+  border-radius: 10px;
+
 }

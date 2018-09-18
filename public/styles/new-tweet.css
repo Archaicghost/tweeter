@@ -37,13 +37,12 @@ html {
     border-bottom: 1px solid #000000;
    }
 
-   .new-tweet .error1 {
-    display: block;
+   .new-tweet #error1 {
+    /* opacity: 0; */
     
   }
   
-  .new-tweet .error2 {
-    display: block;
-  
+  .new-tweet #error2 {
+    /* opacity: 0; */
   }
   

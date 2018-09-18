@@ -1,33 +1,43 @@
 $(function () {
 
+  $('#error1').hide();
+  $('#error2').hide();
+
   //Toggle compose tweet with button
     $( ".compose" ).click(function() {
       $( ".new-tweet" ).slideToggle( "slow" );
       textarea.focus()
     });
-  
+ 
     //make new tweet with ajax and compose tweet input
     $('#tweetForm').on('submit', function(event) {
       event.preventDefault();
   
       // 1. Grab the content of the form
       let formData = $('#tweetForm').serialize();
-      let entry = $('.textarea input').val();
-  
-      console.log(entry)
+      let entry = $('#textarea').val();
+      
+      console.log("I am here", entry)
       if (entry === null || entry === ''){
-        alert('text too short!')
-      }if (entry > 140){
-        alert('text too long!')
+        
+        // ('.error').text('Please type a tweet!')
+        $('#error1').show('fast');
+        // $('#error1').css({'opacity': '1'});
+      }else if (entry.length > 140){
+  
+        // $('#error2').css({'opacity': '1'});
+        $('#error2').show('fast');
+        
+        // ('.error').text('Tweet has to many characters!')
       } else {
       // 2. Submit using ajax
       $.ajax('/tweets', {
         method: 'POST',
         data: formData,
-      }).then(function(success) {
+      }).then(function() {
         // 3. Clear the form
-        // $('.tweetForm input').val('');
-        // $('.tweetForm').empty();
+        $('.textarea').val('');
+        $('.textarea').empty();
           console.log('succesful')
         // 4. Make sure the new tweet shows
         return $.ajax('/tweets');
@@ -89,21 +99,6 @@ $(function () {
     }
   
   
-  //Slide up and slide down for 'compose' box
-  
-  // 	$(button).click(function() {  
-  // 	   if ($(button).submit() + $(window).height() > $(document).height() - 175) {
-  // 	       $('.new-tweet').slideDown(); 
-  // 	   }
-  // 	    else {
-  // 	   	$('.new-tweet').slideUp();  
-  // 	   }
-  // 	});
-  // });
-  //   console.log(createTweetElement(data)); // to see what it looks like
-  //   $('.tweets-container').append($tweet);
-  //   renderTweets(data);
-  
-  // $ is a shortcut for document.getElementById().
+
   
   });
